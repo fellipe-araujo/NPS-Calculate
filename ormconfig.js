@@ -1,4 +1,5 @@
 module.exports = {
+  url: process.env.DATABASE_URL,
   type: 'postgres',
   host: process.env.TYPEORM_HOST,
   port: process.env.TYPEORM_PORT,
@@ -9,5 +10,8 @@ module.exports = {
   migrations: [process.env.TYPEORM_MIGRATIONS],
   cli: {
     migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
+  },
+  extra: {
+    ssl: true,
   },
 };
