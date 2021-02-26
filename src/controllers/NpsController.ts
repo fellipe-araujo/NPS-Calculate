@@ -14,15 +14,15 @@ class NpsController {
     });
 
     const detractor = surveyUser.filter(
-      (survey) => survey.value >= 0 && survey.value <= 6
+      (survey) => Number(survey.value) >= 0 && Number(survey.value) <= 6
     ).length;
 
     const promoters = surveyUser.filter(
-      (survey) => survey.value >= 9 && survey.value <= 10
+      (survey) => Number(survey.value) >= 9 && Number(survey.value) <= 10
     ).length;
 
     const passives = surveyUser.filter(
-      (survey) => survey.value >= 7 && survey.value <= 8
+      (survey) => Number(survey.value) >= 7 && Number(survey.value) <= 8
     ).length;
 
     const totalAnswers = surveyUser.length;

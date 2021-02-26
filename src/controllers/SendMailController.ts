@@ -47,7 +47,7 @@ class SendMailController {
       title: survey.title,
       description: survey.description,
       id: '',
-      link: process.env.URL_MAIL,
+      link: process.env.API_URL,
     };
 
     if (surveyUserAlreadyExists) {
