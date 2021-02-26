@@ -4,10 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/server.js",
-    "dev": "tsnd --transpile-only --ignore-watch node_modules src/server.ts",
-    "build": "tsc",
-    "typeorm": "tsnd ./node_modules/typeorm/cli.js",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
     "test": "NODE_ENV=test jest -i"
   },
   "dependencies": {
